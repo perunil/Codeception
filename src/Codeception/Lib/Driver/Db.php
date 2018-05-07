@@ -71,6 +71,8 @@ class Db
                 return new SqlSrv($dsn, $user, $password, $options);
             case 'oci':
                 return new Oci($dsn, $user, $password, $options);
+            case 'informix':
+                return new Informix($dsn, $user, $password, $options);
             default:
                 return new Db($dsn, $user, $password, $options);
         }
